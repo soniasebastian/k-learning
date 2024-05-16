@@ -1,0 +1,18 @@
+Docker vs Kubernetes
+
+Docker is a container platform, interaction with container, provides container lifecycle.
+Kubernetes is a container orchestration platform
+Containers are ephemeral in nature (shortliving in nature, containers can die and ger revived in anytime)
+
+1. Single host
+Container 1 is taking all resources and container 100 not able to live and dies...nature of docker is scoped to single host...
+
+2. Autohealing
+Application running inside container is not accessible
+Autohealing is a behaviour without users manual intervention
+100 reasosn for a container can go down
+Devops person cant monitor 10,000 containers
+docker ps cannot be done for knowing all running containers
+
+3. Autoscaling
+
