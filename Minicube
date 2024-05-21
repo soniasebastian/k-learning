@@ -1,0 +1,4 @@
+Deploy a K8s cluster using Minicube
+
+- Install Minicube
+- Install Kubectl
