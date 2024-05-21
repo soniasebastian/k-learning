@@ -1,0 +1,51 @@
+K8s Architecture
+
+
+Control plane  (MASTER NODE)
+
+1.API SERVER
+ETCD
+SCHEDULER
+CONTROLLER MANAGER
+CCM
+
+
+DATA PLANE (WORKER NODE) COMPONENTS
+
+1.KUBELET
+2.PROXY
+3. CONTAINER RUNTIME
+
+Docker and Kuberneted comparisons
+
+Creation of a container in docker
+Conatiner runtime...Dockershim
+
+In dockers smallest is container
+docker, docker engine, dockershim
+Docker0/deafult nwtworking bridge networking FOR RUNNING PODS
+
+Create a master (CONTROL PLANE)..multiple masters and workers in kubernetes
+1.POD: In kubernetes smallest deployment is pod
+  In Kuberneres we have pod and a component called kubelet(SOMETHING WRONG with pod, RESTART) RESPONSIBLE FOR RUNNING APPLICATION/PODS NECESSARY ACTION USING CONTROL PLANE
+2.In kubernetes docker not mandatory..CONTAINER RUNTIME we have we can use either dockershim, containerD, cri-o which are container runtimes which implenet k8S CONTAINER iNTERFACE..EXECUTION ENV
+3. Kubeproxy in kubelet PROVIDE NETWORKING/ IP ADDRESS/LOADBALANCER CAPABILITIES...AUTOSCALING FEATURES uses IPTABLES
+
+
+
+DATA PLANE(WORKER) 
+1.API server is the core/heart/CONTROL PLANE of kUBERNETES basically exposes /takes request from external world,  
+identity configuration/SSO CONFIGURATION 
+2. Scheduler is basically responsible for scheduling pods/resources on K8s for node1 / node 2
+3. ETCD is key value store, entire kubernetes CLUSTER info stored in it, orelse we dont have cluster info
+4. Controller manager eg.replica set is maintaining states of k8s pods so autoscale from 1 to 2 pods, yaml file says 2 pods ...many controllers managed by controller manager
+5. Cloud controller manager (CCM), KUBERENTES RUNS on cloud platform, EKS, AKS ETC request to create loadbalancer, create storage if we send request K8s need to make cloud provider understand
+  we need CCM, open source github repo we can write logic for this and can support K8S on new cloud provider
+  On premise we dont need this component
+
+
+
+
+
+
+
