@@ -1,0 +1,58 @@
+k8s production systems  #How to manage 100s of Kubernetes clusters # KOPS
+
+
+
+CREATION/DELETEION/UPDATION
+MINIKUBE practice
+
+K3S
+KIND
+K3D
+MICROK8S
+Platforms for exploring kuberenets
+development environments
+Local kubernetes cluster/dev env not used for prod
+
+
+
+As a devops engineer/ Create infrastructure
+Also manage kubernetes cluster lifecycle
+Kubernetes distribution
+How they manage clusters
+local clusters usually do not have high availability
+do not ensure issues resolution in production all thes eplatforms
+
+Kubernetes distribution/manage installation/manage updates on distribution
+
+
+Linux is an opensource 
+
+Amazon LinuX : Ensure OS updates to protect from vulnerabilities
+Redhat
+Ubuntu
+CentOS
+
+Kubernetes is an opensource COS (CONTAINER ORCHESTRATION SOLUTION)
+
+AWS-EKS MANAGED K8S SERVICE
+REDHAT-OPENSHIFT DISTIBUTION
+VMWARE-tanzu
+Rancherlabs-rancher
+
+these are distributions of kubernetes
+they are not building new/but uder experience/customer experience/support ticker/paying with EKS
+CREATE ec2  instance/k8s/amazon will tell you solution
+K8s support get into managed service EKS
+
+DISTRIBUTION PROVIDES SUPPORT
+
+OPENSOURCE PLATFORM HAVE TIMELINES
+LICENSED ONES WILL GIVE INSTANT SUPPORT
+
+
+
+
+
+
+
+
