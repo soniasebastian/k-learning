@@ -25,7 +25,7 @@ In dockers smallest is container
 docker, docker engine, dockershim
 Docker0/deafult nwtworking bridge networking FOR RUNNING PODS
 
-Create a master (CONTROL PLANE)..multiple masters and workers in kubernetes
+Create a WORKER (DATA PLANE)..multiple masters and workers in kubernetes
 1.POD: In kubernetes smallest deployment is pod
   In Kuberneres we have pod and a component called kubelet(SOMETHING WRONG with pod, RESTART) RESPONSIBLE FOR RUNNING APPLICATION/PODS NECESSARY ACTION USING CONTROL PLANE
 2.In kubernetes docker not mandatory..CONTAINER RUNTIME we have we can use either dockershim, containerD, cri-o which are container runtimes which implenet k8S CONTAINER iNTERFACE..EXECUTION ENV
@@ -33,7 +33,7 @@ Create a master (CONTROL PLANE)..multiple masters and workers in kubernetes
 
 
 
-DATA PLANE(WORKER) 
+CONTROL PLANE(MASTER) 
 1.API server is the core/heart/CONTROL PLANE of kUBERNETES basically exposes /takes request from external world,  
 identity configuration/SSO CONFIGURATION 
 2. Scheduler is basically responsible for scheduling pods/resources on K8s for node1 / node 2
