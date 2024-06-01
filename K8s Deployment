@@ -1,0 +1,62 @@
+************   KUBERNETES DEPLOYMENT ************
+
+--------   Container   --------------
+- docker run -it -p -v --network
+
+
+---    k8S pod ----
+pod can be single/multiple container(apps depend on other apps)
+pod.yaml or Yaml manifest/running specification of docker container ..
+describing conatiner image, port, volumes, networks 
+
+service mesh..side car container(api gateway rules/loadbalance)..
+both can share same networking, communicate with same local host, have same storage/vol
+
+
+
+--------- Deployment ----------
+The below advantages using deployment not using pods
+1. Autohealing beahviour
+2. Autoscaling behaviour
+
+Deployment..........Replicasets(KUBERNETES CONTROLLER).........pods (EOD)
+
+DEPLOYMENT IS A YAML MANIFEST...REPLICACOUNT AS 2
+CREATES 2 PODS
+REPLICA SETS ARE CONTROLLERS 
+
+
+end process....> Deploy.......> replicasets.........> pods
+
+user delets 1 ,,replica sets will set 99 back to 100
+
+100 ....> 150
+replica set creates 50 more pods like replicas
+replica sets creates 50 pods
+
+
+controllers maintains that state..actual state and decide state of the cluster are same
+
+deafult controllers
+custom controllets ...Argo cd, Admission controllers
+
+
+replicaset is k8s controller one actually implents autoscaling, autohealing
+actual state and decide state are maintained
+
+ 1019  minikube ssh
+ 1020  kubectl get pods -o wide
+ 1022  kubectl describe get pods nginx
+ 1023  kubectl logs nginx
+ 1024  kubectl get pods
+ 1025  kubectl describe pod nginx
+ 1026  kubectl logs nginx
+ 1027  clear
+ 1028  kubectl get pods
+ 1029  minikube ssh
+ 1030  vim deployment.yml
+ 1031  kubectl apply -f deployment.yml
+ 1032  kubectl get pods
+ 1033  kubectl get deploy
+ 1034  kubectl get rs
+kubectl delete pod nginx-deployment-77d8468669-z8c4f kubectl get pods -w
