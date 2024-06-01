@@ -75,5 +75,31 @@ docker run -d nginx:1.14.2 --name nginx -p 80:80
 -p port
 
 
+														
+cd Users/soniasebastian/Desktop 														
+mkdir K8s														
+cd K8s/ 														
+vim pod.yml														
+kubectl create -f pod.yml					or 			kubectl apply -f pod.yml						
+pod/nginx created				
+
+kubectl get pods														
+NAME    READY   STATUS    RESTARTS   AGE														
+nginx   1/1     Running   0          8s		
+
+
+ kubectl get pods -o wide														
+NAME    READY   STATUS    RESTARTS   AGE   IP           NODE       NOMINATED NODE   READINESS GATES														
+nginx   1/1     Running   0          36s   10.244.0.5   minikube   <none>           <none>														
+							
+ minikube ssh														
+docker@minikube:~$ curl 10.244.0.5 														
+
+														
+kubectl delete pod nginx														
+														
+kubectl logs  nginx														
+														
+kubectl describe pod nginx														
 
   
