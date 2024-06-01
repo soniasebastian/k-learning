@@ -1,0 +1,48 @@
+***********  PODS *************
+
+
+Pods: definition of how tro run a container
+In docker to run a container, we use
+docker run -d -p -v --network -
+
+In Kubernetes, we use  yaml file
+
+pod can be single container/multiple containers
+pod is excatly similar to docker container
+instead of docker run or command line
+
+we put all in yaml file
+-API VERSION
+-INFO OF container
+-specification of containers
+
+Why this complexity as its enterprise level platform, declarative mode, standardisation
+
+pod resources
+services
+deployment
+
+
+*** side car containers, init containers ****
+
+one or group of containers in a single pod, then Kubernetes will allow
+-shared networking
+-shared storage
+eg: container A want to talk to container B localhost : 3000, share files
+
+cluster ip address genereated to PODS not to containers..
+PODS are wrappers..
+access them using clusterip adrees given by KUBEPROXY
+
+
+*****    KUBECTL  ******
+
+-command line for kubernetes  : DEMO
+ - kubectl get nodes
+ 
+kops in AWS
+  -Minikube
+  -K3S
+  -Kind
+
+  
