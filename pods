@@ -43,6 +43,37 @@ access them using clusterip adrees given by KUBEPROXY
 kops in AWS
   -Minikube
   -K3S
-  -Kind
+  -Kind(kubernetes in docker)
+ - microk8s
+
+
+Minikube is a commandline tool that help us to create a K8s cluster
+VM -> SINGLE NODE KUBERNETES CLUSTER
+-DEMO CLUSTER
+
+We need a virualistion platform for that we use the following commands
+- minikube start --memory=4096 --driver=hyperkit
+or
+minikube start 
+This by default uses docker driver based on the existing profile
+
+********   yaml file **************
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.14.2
+    ports:
+    - containerPort: 80
+
+***** docker command *************
+docker run -d nginx:1.14.2 --name nginx -p 80:80
+-d image
+-p port
+
+
 
   
