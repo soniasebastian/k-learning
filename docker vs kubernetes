@@ -1,0 +1,10 @@
+What is the difference b'w Docker and Kubernetes?
+  Docker is a container platform where as Kubernetes is a container orchestration environment that offers capabilities like Auto healing, 
+  Auto-scaling, Clustering and Enterprise level support like Loadbalanace, integration with custom resource definition, ingress controllers offering advanced capabilities
+    
+
+    In docker containers goes down/ app goes down/end users experience the  traffic loss/ container orchestartion platform K8s is good choice
+    k8 is a cluster
+    In production env we can join cluster, imemdiately moves that pod to another pod
+
+    Docker is a single node platform, if goes down app is not accessible
