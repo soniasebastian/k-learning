@@ -1,0 +1,79 @@
+**********  Kubernetes SERVICES  ***************
+
+what is no service in Kubernetes?
+
+Deploy will create a pod in k8s 
+create replica sets
+create pods
+concurrent : use at same time
+
+
+eg: Whatsapp users access concurrently
+no of connections 1 replica of application can take/handle
+if 100..1 replica set can handle 10 requests then 10 replica sets
+adv :Autohealing
+
+Containers are ephemeral in nature
+
+
+172.16.3.4
+172.16.3.5
+172.16.3.6
+
+if first changes to 172.16.3.8
+then deploy uses Service..SVC
+Service uses kubeproxy offers Loadbalancers ...forward requests...
+
+payment.default.svc
+
+if no service in k8s , even if we have deployment and pods , even if application fails the IP address changes and will not allow autohealing property
+*******   solved by Service by loadbalancing   ************
+
+*******   Service Discovery :Labels & Selectors ************  
+
+Problem: track of deployment, which is creating 3 pods, one iP adress is changes, track this 
+I am not bothered about IP adress changes
+
+eg Goggle...50-60 pods
+service manually keeps track of this problem , it is not possible
+
+Label created eg: payments ...watch for these labels
+replica set controller will use deployment.yml
+label is same problem gets solved
+
+
+creates a deployment...yaml manifest.. inside metadat....create label
+app:payment
+deploy....> RS......> POD 1, 2, 3 with label: app:payment for all pods
+
+
+**************  EXPOSE TO EXTERNAL WORLD *******************
+
+WHOEVER HAS ACCESS TO CLUSTER
+USING SSH IP ADRESS
+
+But in real world scenario, this is not the case
+Kubernetes cannot offer this directly
+endusers in italy, austria...you are in my network, we cant say
+
+A SERVICE CAN EXPOSE YOUR APPLICATION FOR ACCESSING OUSITE K8 CLUSTER
+....... YAML.MANIFEST..........
+SERVICE OF 3 TYPES
+1) CLUSTER IP...INSIDE K8 CLUSTER  ***** 2 BENEFITS...DICOVERY/LOADBALANCING...container/ cluster network adress..only devops engineers
+2) NODE PORT........ INSIDE ORGANISATION..WORKER NODE IP ADRESS ONLY THEY CAN ACCESS ...having VPC nodes access
+3) LOADBALANCER..............EXTERNAL WORLD ....EKS..PUBLIC IP ADDRESS...DEPENDS ON CLOUD PROVIDERS ...WONT WORK IN MINIKUBE LOCAL SYSTEMS...*********  SOLVED BY INGRESSS **********
+
+payments.default.SVC
+
+SERVICE GETS RESOLVED
+
+
+LOADBALANCE...AWS....EKS....ELB...public ip adreess...given by cloud controller manager..
+
+Anyone with access to internet can access the application as service typr is loadbalancer
+
+
+
+
+
+
