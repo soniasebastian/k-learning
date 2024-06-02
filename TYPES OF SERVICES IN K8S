@@ -4,3 +4,9 @@ There are three differentr type sof services that a user can create
 1. Cluster IP mode...CLUSTER NETWORK...
 2. Node port...node ip address...ec2 INSTANCE....ACCESS WORKER NODE
 3. Load balancer mode..OUSITE WORLD...EXPOSE ..C-CM CREATE PUBLIC IP ADDRESS..ALSO USED BY INGRESS.....
+
+What is the difference between Node port and Loadbalancer type service?
+
+When a service is cerated a Node port type, the Kube proxy updates the IP tables with Node IP adress and port that is chosen in the service cinfiguration to access the pods
+
+where as if you create a service as type Loadbalancer, the C-CM creates a external load balancer IP using the underlying cloud provider logic in C-CM. users can  access services using external IP
