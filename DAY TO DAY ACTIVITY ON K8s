@@ -1,0 +1,18 @@
+Day to day activities on kuberenets
+1. As part of devops engineer role, we manage k8 cluster for our org
+2. we ensure apps are deployed properly to k8 cluster and there no issues
+3. we have set up monitoring on K8 cluster
+4. troubleshoot issue/bugs w.r.t pods, services, route traffic in k8 cluster
+subject matter expertise we solve   
+
+
+
+maintencne
+k8 cluster with 3 master node, 10 worker node
+upgrading version of worker node
+manadatory packing
+security vulnerabilitties
+
+ANY ISSUE WITH KUBERENETS 
+JIRA TICKETS WE SOLVE THEM
+
