@@ -1,0 +1,6 @@
+What are the different types of services within kubernetes?
+
+There are three differentr type sof services that a user can create
+1. Cluster IP mode...CLUSTER NETWORK...
+2. Node port...node ip address...ec2 INSTANCE....ACCESS WORKER NODE
+3. Load balancer mode..OUSITE WORLD...EXPOSE ..C-CM CREATE PUBLIC IP ADDRESS..ALSO USED BY INGRESS.....
