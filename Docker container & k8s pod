@@ -1,0 +1,4 @@
+What is the difference b'w Docker container and a Kubernetes pod?
+  A pod in K8s is a runtime specification of a container in docker, A pod provides more declarative way of defining using YAML
+  YOU CAN RUN MORE THAN ONE CONTAINER IN A POD
+  USE SAME RESOURCES, SAME STORAGE SAME VOLUME
