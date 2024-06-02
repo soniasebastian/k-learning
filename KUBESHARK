@@ -1,0 +1,33 @@
+use repository with application of veeramalla for demo..python app with docker image created.
+
+
+
+kubectl get pods
+kubectl get pods -o wide
+kubectl get pods -v=9 (verbosity)
+Service discovery mechanism..services was identifying IP adress...as IP address changes
+so we use concept called labels and selectors
+pod comes with tag, label remains same, IP address changes
+minikube ssh 
+curl -L http://172.16.4.5:8000/demo
+
+ip adress:port/context route
+
+urls.py..we can see contect path ..../demo
+Pod by deafault will have cluster network only
+
+minikube ip
+
+kubectl edit svc (name of service)
+
+
+Kubeshark is available at: url=http://127.0.0.1:8899
+
+tO RE-ESTABLISH A PROXY/PORT-FORWARD RUN :COMMAND ="kubeshark proxy"
+kubeshark tap -A
+kubeshark clean
+new release will happen
+
+ifcongig ....
+
+
