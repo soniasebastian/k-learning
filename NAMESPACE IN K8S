@@ -1,0 +1,8 @@
+WHAT IS A NAMESPACE IN KUBERNETES?
+
+
+In kuberenetes namespace is a logical isolation of resources, network policies, rbac(authentication) and everything.
+for example, there are two projects using same k8S CLUSTER. 
+ONE PROJECT CAN USE NS1 AND OTHER PROJECT CAN USE NS2 WITHOUT ANY OVERLAP AND AUTHENTICATION PROBLEMS.
+
+
