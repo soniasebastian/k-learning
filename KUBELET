@@ -1,0 +1,9 @@
+What is the role of Kubelet?
+Kubelet manages the containers that are scheduled to run on that node
+it ensures that the containers are running and healthy
+that the resources they need are available.
+
+Kubelet communicates with kuberenets API server to get information about the containers that should be running on the node, and then start . 
+and stopd the containers as needed to maintain the desired state.
+it also monitiors the containers to ensure they running correctly and restrts them if necessary.
+API SERVER NOTIFIES REPLICA SETS.
