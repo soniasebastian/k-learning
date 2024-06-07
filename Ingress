@@ -1,0 +1,44 @@
+*********  Kubernetes Ingress ***********
+
+Initailly loadbalances like nginx, F5 etc in virtual or physical servers
+Enterprise loadbalancing offers very good loadbalancing, ratio based loadbalancing, sticky sessions (1 pod then request to that pod), path based lb, domain based,whitelisting, blacklisting
+from VMs to K8s, very happy as it offers autoscaling, autohealing, service discovery, expose app to external world
+deploy...service.....provides LB which is a simple......RoundRobin mechanism....kube-proxy..updates IPTABLES....POD1 5..POD2 5
+COMEMRCIAL LOADBALANCE OFFERS 100's of features ........security using TLS
+LB mode service .....100 services....Cloud provider charge them with every ip adress as they are static IP address, static public IP addresses....
+
+
+*************     PROBLEMS  with K8s services   **************
+1) Enterprise & TLS loadbalance(security)
+sticky sessions
+TLS
+Pathbased
+Hostbased
+Ratiobased...15/20
+
+2) Service of type: Loadbalancer
+Cloud provider will charge you for each and every type of services LBs for static public IP address
+
+Redhat Opendhift...routers
+
+Loadbalancer:
+nginx
+F5
+ambassador
+treafik
+HA proxy
+
+
+User Create Ingress resource....K8s asked to create ingress controller by nginx, F5 ...how to install ingress controllers....
+INGRESS CONTROLLERS ARE LBS with API GATEWAYS
+
+
+
+pod....kubelet..deplo
+service..kubeproxy...IPtables
+
+
+sECURITY AND LOADBALANCING VERY ESSENTIAL..............
+
+
+WE NEED INGRESS CONTROLLER.......ITS A LOADBALANCER.....eg...nginx, F5, HA-Proxy, Traefik etc....
