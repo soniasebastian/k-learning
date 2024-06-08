@@ -1,0 +1,41 @@
+*******  RBAC ******************
+Role based access control
+1.user management access
+2.deal with service accounts access
+
+
+pods have access to configmap
+pods have access to secrets
+
+
+1. service accounts/users
+2. roles/cluster role
+3. rolebinding /Cluster role binding
+
+
+kubernetes offloads user management to IDENTITY PROVIDERS
+Each of them should have only respective access developers/QE /DEVOPS PEOPLE
+
+
+In kuberenetes we have API server works as OAuth server....
+offload usermanagment to Identity providers....
+IAM users we can login to kuberenetes
+IAM OAuth provider
+
+
+LDAP
+OKTA
+SSO...IDENTITY PROVIDERS
+KEYCLOAK....BROKEReg: EKS....KEYCLOAK..GITHUB COLLOBORATION....
+
+
+
+SERVICE ACCOUNTS...YAML FILE...JUST LIKE CREATING PODS
+
+
+role/cluster is yaml file users..they have to access configmap, secrets
+rolebinding/cluster
+
+
+namespace...role
+cluster...rolebinding
