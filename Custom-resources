@@ -1,0 +1,55 @@
+**********  Custom Resources/ Custom resource definition  (CRD)  *************
+
+1. CRD
+2. CR
+3. Custom controllers
+
+controllers, services, configmaps, secrets,pods etc in K8s
+ootb, ***********       if we have to extend/ enhance   the capabilities of API of K8s & introduce new resource..    *******************
+  k8s doesn't support security.. Gitops, Argocd, keycloak, flux, spinachr etc, CNCF 
+
+  1. Devops engineeer
+  2. user 
+
+
+  Real scenario.....kuberenetes cluster
+  deployment
+service
+ingress
+  config maps
+  secrets....
+
+  
+  app work fine
+
+
+  There is ISTIO service Mesh based capabilities
+  ARGOCD adss GITOPS capabilities
+  Keycloak..add identity & Access management / oAuth (provide tight security)
+
+
+  Security....qverno, 
+
+
+  CRD...Defining a new type of API to K8s....
+  yaml file will define what a user can create....eg.ISTIO
+
+  a complete yml file which is used to introduce new API with all fields a user can can have all support fields
+
+
+  apiversion
+  kind
+  metadata
+  spec
+  template
+
+  Deployment.yml....Resource
+
+
+ ******* Resouce definition  **********   will look to above resource and says its correct or not
+  ****** Custom Kubernetes controller ************
+
+
+
+
+  
